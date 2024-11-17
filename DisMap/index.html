@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DisMap</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="logodismap.png" type="image/x-icon" sizes="72x72">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+</head>
+<body>
+    <nav>
+        <div class="layar-dalam">
+            <div class="logo">
+                <a href=""><img src="DisasterMap2.png" class="putih" /></a>
+            </div>
+            <div class="menu">
+                <a href="#" class="tombol-menu">
+                    <span class="garis"></span>
+                    <span class="garis"></span>
+                    <span class="garis"></span>
+                </a>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#map">Map</a></li>
+                    <li><a href="#solution">Solution</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="layar-penuh">
+        <header id="home">
+            <div class="overlay"></div>
+            <video autoplay muted loop>
+                <source src="bg1.mp4" type="video/mp4" />
+            </video>
+            <div class="intro">
+                <h3>DISASTER MAPS</h3>
+                <p>
+                    WebGIS untuk mitigasi bencana di wilayah Banten
+                </p>
+            </div>
+        </header>
+        <main>
+            <section id="about">
+                <div class="layar-dalam">
+                    <h3>About</h3>
+                    <div class="konten-isi">
+                        <p>
+                            <p style="font-size: 25px;">Selamat datang di DisasterMap!</p>
+                            <p>Sebuah platform untuk informasi dan sumber daya mitigasi bencana di wilayah Banten. Kami berkomitmen untuk meningkatkan kesadaran dan kesiapsiagaan masyarakat terhadap berbagai ancaman alam seperti gempa bumi, tsunami, gunung meletus,dan lain-lain.
+                            Bencana alam (bahasa Inggris: Natural disaster), adalah suatu peristiwa yang terbagi menjadi dua berdasarkan pemicunya. Pertama, bencana yang terjadi secara alami khususnya yang sering terjadi di Provinsi Banten dapat berupa banjir, letusan gunung berapi, gempa bumi, tsunami.</p>
+                            <p>
+                                Tujuan utama WEB DisMap ini adalah memberikan informasi yang akurat dan terkini mengenai risiko bencana serta langkah-langkah preventif yang dapat diambil oleh individu dan komunitas.
+                                kami memberikan beberapa informasi mengenai situasi bencana dan upaya penanggulangannya, serta menyediakan platform untuk berbagi informasi dan pengalaman antar komunitas. Dengan pendekatan ini, kami berharap dapat membangun masyarakat Banten yang lebih tangguh dan siap menghadapi bencana.
+                            </p>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="abuabu" id="support">
+                <div class="layar-dalam support">
+                    <div class="img-container">
+                        <img src="gunung meletus.jpg"> 
+                        <h6><a href="https://bpbd.tanjungbalaikota.go.id/jenis-bencana/gunung-meletus/">Gunung Meletus</a></h6>
+                        <p>
+                            Gunung meletus merupakan peristiwa yang terjadi akibat endapan magma di dalam perut bumi yang didorong keluar oleh gas yang bertekanan tinggi. Magma adalah cairan pijar yang terdapat di dalam lapisan bumi dengan suhu yang sangat tinggi, yakni diperkirakan lebih dari 1.000 °C.  
+                        </p>
+
+                    </div>
+                    <div class="img-container">
+                        <img src="tsunami.jpg">
+                        <h6><a href="https://bpbd.ntbprov.go.id/pages/tsunami">Tsunami</a></h6>
+                        <p>
+                            Tsunami merupakan gelombang air laut besar yang dipicu oleh pusaran air bawah laut karena pergeseran lempeng, tanah longsor, erupsi gunungapi, dan jatuhnya meteor. Tsunami dapat bergerak dengan kecepatan sangat tinggi dan dapat mencapai daratan dengan ketinggian gelombang hingga 30 meter.
+                        </p>
+                    </div>
+                    <div class="img-container">
+                        <img src="gempa bumi.jpg">
+                        <h6><a href="https://bpbd.ntbprov.go.id/pages/gempa-bumi">Gempa Bumi</a></h6>
+                        <p>
+                            Gempa bumi adalah getaran atau getar-getar yang terjadi di permukaan bumi akibat pelepasan energi dari dalam secara tiba-tiba yang menciptakan gelombang seismik. Gempa Bumi biasa disebabkan oleh pergerakan kerak bumi (lempeng Bumi).Gempa Bumi diukur dengan menggunakan alat Seismometer.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="map">
+                <div class="layar-dalam">
+                    <h3>Map</h3>
+                    <p>
+                        <a href="info.html" class="tombol">Info Selengkapnya</a>
+                    </p>
+                    <p class="ringkasan">
+                       info selengkapnya untuk melihat map lebih lanjut
+                    </p>
+                </div>
+                
+            </section>
+            <section id="solution">
+                <div class="layar-dalam">
+                    <h3>Solution</h3>
+                    <div class="solution-grid">
+                        <div class="grid-item">
+                            <h5>Gunung Meletus</h5>
+                            <img src="solution 1.jpg" alt="Gunung Meletus">
+                            <div class="solution-points">
+                                <div class="solution-point">
+                                    <h6 class="popup-trigger" data-popup="gunung-meletus-pra">Pra-Bencana</h6>
+                                </div>
+                                <div class="solution-point">
+                                    <h6 class="popup-trigger" data-popup="gunung-meletus-saat">Saat Bencana</h6>
+                                </div>
+                                <div class="solution-point">
+                                    <h6 class="popup-trigger" data-popup="gunung-meletus-pasca">Pasca Bencana</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <h5>Tsunami</h5>
+                            <img src="solution 2.jpg" alt="Tsunami">
+                            <div class="solution-points">
+                                <div class="solution-point">
+                                    <h6 class="popup-trigger" data-popup="tsunami-pra">Pra-Bencana</h6>
+                                </div>
+                                <div class="solution-point">
+                                    <h6 class="popup-trigger" data-popup="tsunami-saat">Saat Bencana</h6>
+                                </div>
+                                <div class="solution-point">
+                                    <h6 class="popup-trigger" data-popup="tsunami-pasca">Pasca Bencana</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <h5>Gempa Bumi</h5>
+                            <img src="solution 3.jpg" alt="Gempa Bumi">
+                            <div class="solution-points">
+                                <div class="solution-point">
+                                    <h6 class="popup-trigger" data-popup="gempa-pra">Pra-Bencana</h6>
+                                </div>
+                                <div class="solution-point">
+                                    <h6 class="popup-trigger" data-popup="gempa-saat">Saat Bencana</h6>
+                                </div>
+                                <div class="solution-point">
+                                    <h6 class="popup-trigger" data-popup="gempa-pasca">Pasca Bencana</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <div id="popup" class="popup">
+                <div class="popup-content">
+                    <span class="close-button">&times;</span>
+                    <div id="popup-text"></div>
+                </div>
+            </div>
+            
+            
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <!-- Content dari solution section akan dimasukkan di sini -->
+    </div>
+    <center>
+    <button id="close-button">Tutup</button>
+     </center>
+</div>
+            
+
+<section id="news">
+    <div class="layar-dalam">
+        <h3>News</h3>
+        <div id="news-container" class="news-container"></div>
+    </div>
+    <script>
+       document.addEventListener('DOMContentLoaded', function() {
+  const newsArticles = [
+      {
+          title: "Status Gunung Anak Krakatau Turun ke Level Waspada",
+          link: "https://www.cnnindonesia.com/nasional/20240420093352-20-1088352/status-gunung-anak-krakatau-turun-ke-level-waspada",
+          imageUrl: "gunung.jpeg",
+          description: "Jakarta CNN Indonesia -- Pusat Vulkanologi dan Mitigasi Bencana Geologi (PVMBG) menurunkan status Gunung Anak Krakatau dari semula Siaga (level III) menjadi Waspada (Level II) pada Sabtu (20/4) tengah malam."
+      },
+      {
+          title: "Gempa M 4,8 Terjadi di Sumur Banten",
+          link: "https://news.detik.com/berita/d-7313574/gempa-m-4-8-terjadi-di-sumur-banten",
+          imageUrl: "gempa.jpeg",
+          description: "Gempa dengan magnitudo (M) 4,8 terjadi di Sumur, Pandeglang, Banten. Gempa tidak berpotensi menimbulkan tsunami. BMKG menyebut gempa terjadi pukul 15.27 WIB, Sabtu (27/4/2024). Pusat gempa berada pada kedalaman 10 kilometer."
+      }
+  ];
+
+  const newsContainer = document.getElementById('news-container');
+
+  newsArticles.forEach(article => {
+      const articleElement = document.createElement('div');
+      articleElement.classList.add('news-article');
+
+      const imageElement = document.createElement('img');
+      imageElement.src = article.imageUrl;
+
+      const titleElement = document.createElement('h4');
+      titleElement.textContent = article.title;
+
+      const descriptionElement = document.createElement('p');
+      descriptionElement.textContent = article.description;
+
+      const linkElement = document.createElement('a');
+      linkElement.textContent = 'Read more';
+      linkElement.href = article.link;
+      linkElement.target = '_blank';
+
+      articleElement.appendChild(imageElement);
+      articleElement.appendChild(titleElement);
+      articleElement.appendChild(descriptionElement);
+      articleElement.appendChild(linkElement);
+
+      newsContainer.appendChild(articleElement);
+  });
+});
+ 
+    </script>
+</section>
+
+<section id="team">
+    <div class="layar-dalam">
+        <h3>Team</h3>
+        <div class="team" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+            <div style="border: 2px solid #bdbdbd; padding: 10px; width: 200px; text-align: center; background-color: #fff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <h6>Samuel Silaban</h6>
+                <p>Program Studi: Sistem Informasi Kelautan</p>
+                <p>Email: silabansamuel05@upi.edu</p>
+                <p>Universitas Pendidikan Indonesia</p>
+            </div>
+            <div style="border: 2px solid #ccc; padding: 10px; width: 200px; text-align: center; background-color: #fff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <h6>Lingga Diva Puspita</h6>
+                <p>Program Studi: Sistem Informasi Kelautan</p>
+                <p>Email: linggadivapuspita@upi.edu</p>
+                <p>Universitas Pendidikan Indonesia</p>
+            </div>
+            <div style="border: 2px solid #ccc; padding: 10px; width: 200px; text-align: center; background-color: #fff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <h6>Kaila Ashma' Nur Fadhilah</h6>
+                <p>Program Studi: Sistem Informasi Kelautan</p>
+                <p>Email: kaila.ashma@upi.edu</p>
+                <p>Universitas Pendidikan Indonesia</p>
+            </div>
+            <div style="border: 2px solid #ccc; padding: 10px; width: 200px; text-align: center; background-color: #fff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <h6>Faridah Wulan Sari</h6>
+                <p>Program Studi: Sistem Informasi Kelautan</p>
+                <p>Email: faridahwulan.31@upi.edu</p>
+                <p>Universitas Pendidikan Indonesia</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+        </main>
+        <footer id="contact">
+            <div class="layar-dalam footer-content">
+                <div class="footer-section">
+                    <h5>Info</h5>
+                    <p>DisasterMap adalah platform peta bencana interaktif yang didedikasikan untuk membantu dalam mitigasi bencana di wilayah Banten. Dengan menggunakan teknologi Geographical Information System (GIS), kami menyajikan informasi terkini mengenai risiko bencana dan langkah-langkah mitigasi yang dapat diambil oleh masyarakat, pemangku kepentingan, dan penanggung jawab kebijakan.</p>
+                </div>
+                <div class="footer-section">
+                    <h5>Help</h5>
+                    <p>Butuh bantuan mengenai penggunaan Dismap?</p>
+                </div>
+                <div class="footer-section">
+                    <h5>Ikuti Kami</h5>
+                    <a href="https://www.instagram.com/24ellll_/" target="_blank">
+                        <img src="instagramm.png" alt="Instagram" style="width: 40px; height: 40px; background-color: transparent;">
+                    </a>
+                        </a>
+                        <a href="https://www.instagram.com/dvapspt/" target="_blank">
+                            <img src="instagramm.png" alt="Instagram" style="width: 40px; height: 40px; background-color: transparent;">
+                        </a>
+                        <a href="https://www.instagram.com/akun_instagram3" target="_blank">
+                            <img src="instagramm.png" alt="Instagram" style="width: 40px; height: 40px; background-color: transparent;">
+                        </a>
+                        <a href="https://www.instagram.com/w.ulansr/" target="_blank">
+                            <img src="instagramm.png" alt="Instagram" style="width: 40px; height: 40px; background-color: transparent;">
+                        </a>
+                    </p>
+                    <p>
+                </div>
+                
+            <div class="layar-dalam">
+                <div class="copyright">&copy; 2024 DisMap ID</div>
+            </div>
+        </footer>
+    </div>
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"
+    ></script>
+    <script src="javascript.js"></script>
+</body>
+</html>
